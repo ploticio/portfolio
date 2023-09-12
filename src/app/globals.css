@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .slant {
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 85%);
+  .cutoff {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
   .heroButton {
