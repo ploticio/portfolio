@@ -1,5 +1,6 @@
 "use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { Flex, Text } from "@chakra-ui/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -9,13 +10,13 @@ export default function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const newY = useTransform(scrollYProgress, [0, 1], ["0%", "675%"]);
+  const newY = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const mobileY = useTransform(scrollYProgress, [0, 1], ["0%", "250%"]);
-  const match = useMediaQuery("768px");
+  const match = useMediaQuery();
 
   return (
     <>
-      <div ref={ref} className="relative cutoff bg-white h-screen">
+      <div ref={ref} className="relative cutoff h-screen">
         <motion.div
           initial={{ y: -300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -23,19 +24,29 @@ export default function Hero() {
           style={{ y: match ? newY : mobileY }}
           className="flex flex-col absolute left-[15%] top-[10%] md:top-1/4"
         >
-          <h1 className="text-4xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+          <Text
+            fontSize={{ base: "4xl", md: "7xl" }}
+            fontWeight="extrabold"
+            bgClip="text"
+            bgGradient="linear(to-r, #22c55e, #15803d)"
+          >
             Hi, my name&apos;s Darren.
-          </h1>
-          <h1 className="text-4xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700 pb-2">
+          </Text>
+          <Text
+            fontSize={{ base: "4xl", md: "7xl" }}
+            fontWeight="extrabold"
+            bgClip="text"
+            bgGradient="linear(to-r, #22c55e, #15803d)"
+          >
             Welcome to my showcase.
-          </h1>
-          <div className="flex flex-col items-start space-y-10 justify-between mt-7 md:flex-row  md:space-y-0 md:w-4/5">
+          </Text>
+          <Flex direction={{ base: "column", md: "row" }} align="flex-start" justify="space-between" width="80%" mt="7">
             <a href="#about" className="heroButton">
               About
             </a>
             <a className="heroButton">Projects</a>
             <a className="heroButton">Contact</a>
-          </div>
+          </Flex>
         </motion.div>
       </div>
       <motion.div
