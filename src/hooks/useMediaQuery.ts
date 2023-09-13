@@ -7,9 +7,12 @@ export default function useMediaQuery(width: string) {
   });
 
   useEffect(() => {
-    window.matchMedia(`(min-width: ${width})`).addEventListener("change", (e) => setMatches(e.matches));
+    const handleResize = (e: MediaQueryListEvent) => {
+      setMatches(e.matches);
+    };
+    window.matchMedia(`(min-width: ${width})`).addEventListener("change", (e) => handleResize(e));
     return () => {
-      window.matchMedia(`(min-width: ${width})`).removeEventListener("change", (e) => setMatches(e.matches));
+      window.matchMedia(`(min-width: ${width})`).removeEventListener("change", (e) => handleResize(e));
     };
   }, [width]);
 

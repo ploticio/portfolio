@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <main className="relative text-white">
+    <main className="relative overflow-x-hidden">
       <Hero />
 
       <section id="about">

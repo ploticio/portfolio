@@ -8,6 +8,10 @@
   }
 
   .heroButton {
-    @apply text-green-800 uppercase tracking-widest mb-12;
+    @apply text-green-800 uppercase tracking-widest text-xl hover:before:scale-x-100 hover:before:origin-center relative before:w-full before:h-[2px] before:origin-center before:transition-transform before:duration-200 before:scale-x-0 before:bg-green-700 before:absolute before:left-0 before:-bottom-1;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
