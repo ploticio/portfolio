@@ -1,19 +1,16 @@
-import About from "./components/About";
-import ColorSwitch from "./components/ColorSwitch";
-import Hero from "./components/Hero";
+import About from "./components/sections/About";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
     <main className="relative overflow-x-hidden">
       <Hero />
 
+      {/* Projects */}
+
       <section id="about">
         <About />
-        <ColorSwitch />
       </section>
-
-      {/* Projects */}
-      {/* Skills */}
       {/* Contact */}
     </main>
   );
