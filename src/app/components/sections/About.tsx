@@ -9,7 +9,7 @@ export default function About() {
   const textColor = useColorModeValue("emerald.700", "white");
 
   return (
-    <Flex direction="column" justify="center" align="center" minH="100vh" pos="relative">
+    <Flex direction="column" justify="center" align="center" pos="relative" className="min-h-[50vh]">
       <Card boxShadow="xl">
         <CardBody>
           <Stack direction={{ base: "column", md: "row" }} divider={<StackDivider />} spacing="4">
@@ -28,7 +28,7 @@ export default function About() {
                 height={150}
                 className="border-solid border rounded-full object-top border-emerald-700"
               />
-              <Text pt="2" fontSize="md">
+              <Text pt="2" fontSize="lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi quo ratione vero veniam soluta, adipisci
                 molestias quidem cum mollitia deleniti facilis dolor deserunt id iusto molestiae, numquam tempora culpa.
                 Laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quo minus beatae

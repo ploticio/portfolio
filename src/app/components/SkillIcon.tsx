@@ -4,11 +4,17 @@ import Image from "next/image";
 type Props = {
   image: string;
   label: string;
+  width?: number;
+  height?: number;
 };
-export default function SkillIcon({ image, label }: Props) {
+export default function SkillIcon({ image, label, width, height }: Props) {
   return (
     <Tooltip hasArrow label={label}>
-      <Image src={image} alt={label} width={50} height={50} />
+      {width && height ? (
+        <Image src={image} alt={label} width={width} height={height} />
+      ) : (
+        <Image src={image} alt={label} width={50} height={50} />
+      )}
     </Tooltip>
   );
 }
