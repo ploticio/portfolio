@@ -4,7 +4,7 @@ import ProjectCard from "../ProjectCard";
 
 export default function Projects() {
   return (
-    <Flex direction="column" justify="center" align="center" className="min-h-screen">
+    <Flex direction="column" justify="center" align="center" minH="100vh">
       <Text fontSize={{ base: "4xl", md: "7xl" }} color="emerald.700" textTransform="uppercase" letterSpacing="widest">
         PLACEHOLDER
       </Text>

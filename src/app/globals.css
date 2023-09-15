@@ -1,15 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.heroButton {
+  color: rgb(22 101 52);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  position: relative;
+}
 
-@layer components {
-  .cutoff {
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
-  }
+.heroButton::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(22 101 52);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .heroButton {
-    @apply text-green-800 uppercase tracking-widest text-xl hover:before:scale-x-100 hover:before:origin-center relative before:w-full before:h-[2px] before:origin-center before:transition-transform before:duration-200 before:scale-x-0 before:bg-green-700 before:absolute before:left-0 before:-bottom-1;
-  }
+.heroButton:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.cutoff {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
 }
 
 html {

@@ -1,8 +1,12 @@
 "use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { Flex, Text } from "@chakra-ui/react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Box, Flex, Text, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { isValidMotionProp, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+
+const MotionBox = chakra(motion.div, {
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,13 +20,18 @@ export default function Hero() {
 
   return (
     <>
-      <div ref={ref} className="relative cutoff min-h-[130vh]">
-        <motion.div
+      <Box ref={ref} pos="relative" minH="130vh" className="cutoff">
+        <MotionBox
           initial={{ y: -300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          // @ts-ignore
           transition={{ duration: 1 }}
           style={{ y: match ? newY : mobileY }}
-          className="flex flex-col absolute left-[15vw] top-[10%] md:top-[25vh]"
+          display="flex"
+          flexDirection="column"
+          position="absolute"
+          left="15vw"
+          top={{ base: "10vh", md: "25vh" }}
         >
           <Text
             fontSize={{ base: "4xl", md: "7xl" }}
@@ -59,14 +68,20 @@ export default function Hero() {
               Contact
             </a>
           </Flex>
-        </motion.div>
-      </div>
-      <motion.div
+        </MotionBox>
+      </Box>
+      <MotionBox
         initial={{ y: 700, rotate: -9 }}
         animate={{ y: 0 }}
+        // @ts-ignore
         transition={{ duration: 1 }}
-        className="absolute bg-emerald-700 h-[50vh] w-[150vw] top-[70vh] -left-1/3"
-      />
+        pos="absolute"
+        backgroundColor="emerald.700"
+        h="50vh"
+        w="150vw"
+        top="70vh"
+        left="-33%"
+      ></MotionBox>
     </>
   );
 }

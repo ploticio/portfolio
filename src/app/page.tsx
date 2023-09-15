@@ -6,17 +6,19 @@ import ColorSwitch from "./components/ColorSwitch";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-10 relative overflow-x-hidden">
+    <main
+      style={{ display: "flex", flexDirection: "column", gap: "2.5rem", position: "relative", overflowX: "hidden" }}
+    >
       <Hero />
-      {/* <div className="w-full h-4 bg-red-700 z-50"></div> */}
+
       <section id="about">
         <About />
       </section>
-      {/* <div className="w-full h-4 bg-red-700 z-50"></div> */}
+
       <section id="projects">
         <Projects />
       </section>
-      {/* <div className="w-full h-4 bg-red-700 z-50"></div> */}
+
       <section id="contact">
         <Contact />
       </section>
