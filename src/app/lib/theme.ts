@@ -18,6 +18,7 @@ const theme = extendTheme({
       800: "#166534",
       900: "#14532d",
     },
+    darkEmerald: "#98d7a2",
   },
   config,
 });

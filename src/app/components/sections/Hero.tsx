@@ -1,6 +1,6 @@
 "use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { Box, Flex, Text, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { Box, Flex, Text, chakra, shouldForwardProp, useColorModeValue } from "@chakra-ui/react";
 import { isValidMotionProp, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -17,6 +17,7 @@ export default function Hero() {
   const newY = useTransform(scrollYProgress, [0, 1], ["0%", "675%"]);
   const mobileY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   const match = useMediaQuery();
+  const themeColor = useColorModeValue("emerald.700", "darkEmerald");
 
   return (
     <>
@@ -37,7 +38,7 @@ export default function Hero() {
             fontSize={{ base: "4xl", md: "7xl" }}
             fontWeight="extrabold"
             bgClip="text"
-            bgGradient="linear(to-r, emerald.500, emerald.700)"
+            bgGradient={`linear(to-r, emerald.500, ${themeColor})`}
           >
             Hi, my name&apos;s Darren.
           </Text>
@@ -45,7 +46,7 @@ export default function Hero() {
             fontSize={{ base: "4xl", md: "7xl" }}
             fontWeight="extrabold"
             bgClip="text"
-            bgGradient="linear(to-r, emerald.500, emerald.700)"
+            bgGradient={`linear(to-r, emerald.500, ${themeColor})`}
             lineHeight="120%"
           >
             Welcome to my showcase.
@@ -59,13 +60,13 @@ export default function Hero() {
             mt="7"
           >
             <a href="#about" className="heroButton">
-              About
+              <Text color="green.500">About</Text>
             </a>
             <a href="#projects" className="heroButton">
-              Projects
+              <Text color="green.500">Projects</Text>
             </a>
             <a href="#contact" className="heroButton">
-              Contact
+              <Text color="green.500">Contact</Text>
             </a>
           </Flex>
         </MotionBox>
@@ -76,7 +77,7 @@ export default function Hero() {
         // @ts-ignore
         transition={{ duration: 1 }}
         pos="absolute"
-        backgroundColor="emerald.700"
+        backgroundColor={themeColor}
         h="50vh"
         w="150vw"
         top="70vh"

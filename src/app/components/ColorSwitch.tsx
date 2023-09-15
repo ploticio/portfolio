@@ -1,8 +1,13 @@
 "use client";
 
-import { Button, useColorMode } from "@chakra-ui/react";
+import { Button, Icon, useColorMode } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export default function ColorSwitch() {
   const { colorMode, toggleColorMode } = useColorMode();
-  return <Button onClick={toggleColorMode}>Toggle {colorMode === "light" ? "Dark" : "Light"}</Button>;
+  return (
+    <Button position="fixed" bottom="4px" right="4px" borderRadius="9999px" variant="outline" onClick={toggleColorMode}>
+      <Icon as={colorMode === "light" ? MoonIcon : SunIcon} />
+    </Button>
+  );
 }

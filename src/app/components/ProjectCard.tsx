@@ -1,17 +1,19 @@
 "use client";
+import { Link } from "@chakra-ui/next-js";
 import {
-  Box,
   Button,
   Card,
   CardBody,
   Container,
   Flex,
   HStack,
+  Icon,
   Stack,
   StackDivider,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import React from "react";
 
@@ -19,15 +21,15 @@ type Props = {
   title: string;
   image?: string;
   skills: string[];
-  live?: string;
+  live: string;
   source?: string;
   children: React.ReactNode;
 };
 
 const ProjectCard: React.FC<Props> = ({ title, image, skills, live, source, children }) => {
-  const textColor = useColorModeValue("emerald.700", "white");
+  const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
-    <Card boxShadow="xl">
+    <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
       <CardBody>
         <Stack direction={{ base: "column", md: "row" }} divider={<StackDivider />} spacing="4">
           <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
@@ -54,9 +56,25 @@ const ProjectCard: React.FC<Props> = ({ title, image, skills, live, source, chil
                 ))}
               </HStack>
               <Text>{children}</Text>
-              <HStack>
-                <Button colorScheme="red">Live</Button>
-                {source && <Button>Source Code</Button>}
+              <HStack mt="3">
+                <Link href={live}>
+                  <Button colorScheme="green" variant="solid">
+                    <HStack>
+                      <Text letterSpacing="widest">Link</Text>
+                      <Icon as={ExternalLinkIcon} />
+                    </HStack>
+                  </Button>
+                </Link>
+                {source && (
+                  <Link href={source}>
+                    <Button colorScheme="green" variant="ghost">
+                      <HStack>
+                        <Text letterSpacing="wide">Source</Text>
+                        <Icon as={GitHubLogoIcon} />
+                      </HStack>
+                    </Button>
+                  </Link>
+                )}
               </HStack>
             </Flex>
           </Container>

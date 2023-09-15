@@ -1,5 +1,4 @@
 .heroButton {
-  color: rgb(22 101 52);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1.25rem;
@@ -15,7 +14,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(22 101 52);
+  background-color: #38a169;
   transform-origin: center;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
