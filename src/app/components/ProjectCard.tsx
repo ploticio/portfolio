@@ -13,41 +13,55 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import React from "react";
 
 type Props = {
   title: string;
-  image?: string;
   skills: string[];
-  live: string;
+  platform?: "desktop" | "mobile" | "both";
+  image?: { src: string; width: number; height: number };
+  placeholder?: boolean;
+  live?: string;
   source?: string;
   children: React.ReactNode;
 };
 
-const ProjectCard: React.FC<Props> = ({ title, image, skills, live, source, children }) => {
+const ProjectCard: React.FC<Props> = ({ title, skills, platform, image, placeholder, live, source, children }) => {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
       <CardBody>
         <Stack direction={{ base: "column", md: "row" }} divider={<StackDivider />} spacing="4">
-          <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
-            {image ? (
-              <Image src={image} alt={`${title} project image`} width={250} height={250} />
-            ) : (
-              <Text>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum recusandae error magnam fugit totam
-                aperiam nulla dicta earum ipsa molestiae voluptas tempore odit, laborum debitis distinctio explicabo
-                nesciunt voluptatem.
-              </Text>
-            )}
-          </Container>
-          <Container maxW="container.xl">
-            <Flex direction="column" justify="center" align="center" gap={2}>
-              <Text fontSize="xl" textTransform="uppercase" letterSpacing="widest">
-                {title}
-              </Text>
+          {image && (
+            <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
+              <Image src={image} alt={`${title} project image`} width={image.width} height={image.height} />
+            </Container>
+          )}
+          {placeholder && (
+            <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laudantium quod placeat, tempora vel id
+              animi, ipsa aliquid dolores fugiat ipsam consequatur, ab architecto accusantium recusandae? Quisquam
+              asperiores cumque modi.
+            </Container>
+          )}
+          <Container
+            maxW="container.xl"
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            alignItems="center"
+            gap={2}
+          >
+            <Flex direction="column" align="center" gap={2}>
+              <HStack>
+                <Text fontSize="xl" textTransform="uppercase" letterSpacing="widest">
+                  {title}
+                </Text>
+                {platform === "desktop" ? <Icon as={DesktopIcon} /> : null}
+                {platform === "mobile" ? <Icon as={MobileIcon} /> : null}
+              </HStack>
               <HStack divider={<StackDivider />}>
                 {skills.map((skill, index) => (
                   <Text color={textColor} key={index}>
@@ -55,28 +69,32 @@ const ProjectCard: React.FC<Props> = ({ title, image, skills, live, source, chil
                   </Text>
                 ))}
               </HStack>
-              <Text>{children}</Text>
-              <HStack mt="3">
-                <Link href={live}>
-                  <Button colorScheme="green" variant="solid">
+            </Flex>
+
+            <Text>{children}</Text>
+
+            <HStack mt="3" width={200}>
+              {live && (
+                <Link href={live} rel="noopener noreferrer" target="_blank" width="100%">
+                  <Button colorScheme="green" variant="solid" width="100%">
                     <HStack>
                       <Text letterSpacing="widest">Link</Text>
                       <Icon as={ExternalLinkIcon} />
                     </HStack>
                   </Button>
                 </Link>
-                {source && (
-                  <Link href={source}>
-                    <Button colorScheme="green" variant="ghost">
-                      <HStack>
-                        <Text letterSpacing="wide">Source</Text>
-                        <Icon as={GitHubLogoIcon} />
-                      </HStack>
-                    </Button>
-                  </Link>
-                )}
-              </HStack>
-            </Flex>
+              )}
+              {source && (
+                <Link href={source} rel="noopener noreferrer" target="_blank" width="100%">
+                  <Button colorScheme="green" variant="ghost" width="100%">
+                    <HStack>
+                      <Text letterSpacing="wide">Source</Text>
+                      <Icon as={GitHubLogoIcon} />
+                    </HStack>
+                  </Button>
+                </Link>
+              )}
+            </HStack>
           </Container>
         </Stack>
       </CardBody>
