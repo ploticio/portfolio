@@ -3,6 +3,7 @@ import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import ColorSwitch from "./components/ColorSwitch";
+import Ending from "./components/sections/Ending";
 
 export default function Home() {
   return (
@@ -10,18 +11,16 @@ export default function Home() {
       style={{ display: "flex", flexDirection: "column", gap: "2.5rem", position: "relative", overflowX: "hidden" }}
     >
       <Hero />
-
       <section id="about">
         <About />
       </section>
-
       <section id="projects">
         <Projects />
       </section>
-
       <section id="contact">
         <Contact />
       </section>
+      <Ending />
       <ColorSwitch />
     </main>
   );

@@ -82,7 +82,7 @@ export default function Hero() {
         w="150vw"
         top="70vh"
         left="-33%"
-      ></MotionBox>
+      />
     </>
   );
 }

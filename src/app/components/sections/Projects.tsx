@@ -7,14 +7,14 @@ export default function Projects() {
   return (
     <Flex direction="column" justify="center" align="center" minH="100vh">
       <Text fontSize={{ base: "4xl", md: "7xl" }} color={themeColor} textTransform="uppercase" letterSpacing="widest">
-        PROJECTS
+        FEATURED
       </Text>
       <Flex direction="column" justify="center" align="center" gap={10}>
         <ProjectCard
           title="Blackjack"
           skills={["TypeScript", "React", "Framer Motion"]}
           image={{ src: "/projectImages/blackjack.gif", width: 400, height: 225 }}
-          live="/"
+          live="https://ploticio.github.io/blackjack/"
           source="https://github.com/ploticio/blackjack"
         >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa nemo expedita sapiente eius accusantium.
@@ -41,10 +41,6 @@ export default function Projects() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, assumenda dolorum? Ut laudantium
           doloribus nihil, veniam animi porro possimus at impedit placeat hic similique architecto excepturi voluptate
           facere molestiae explicabo!
-        </ProjectCard>
-        <ProjectCard title="This website" skills={["NextJS", "Chakra UI"]} source="/">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit facere dolore est nostrum consectetur error nam
-          necessitatibus nemo esse velit non, omnis odio ab cupiditate, recusandae quas modi reiciendis deleniti.
         </ProjectCard>
         <Text>See More...</Text>
       </Flex>
