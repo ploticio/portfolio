@@ -43,8 +43,8 @@ export default function Projects() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerBody>
-              <BackButton close={onClose} />
               <Catalog />
+              <BackButton close={onClose} />
             </DrawerBody>
           </DrawerContent>
         </Drawer>

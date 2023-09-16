@@ -24,7 +24,8 @@ export const projectData: Project[] = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quam ducimus. Quis eos reprehenderit similique id soluta earum temporibus iusto numquam assumenda. Accusantium quas quos quidem molestiae. Illo, soluta dolorum!",
     skills: ["C#", "Unity Engine"],
     platform: "desktop",
-    live: "/",
+    image: "/projectImages/blobboi.gif",
+    live: "https://ploticio.itch.io/blobboi",
   },
   {
     title: "Unamed Discord Bot",
