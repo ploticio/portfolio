@@ -1,11 +1,12 @@
 "use client";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import ProjectCard from "../ProjectCard";
+import { Link } from "@chakra-ui/next-js";
 
 export default function Projects() {
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
-    <Flex direction="column" justify="center" align="center" minH="100vh">
+    <Flex direction="column" justify="center" align="center" minH="100vh" gap={4}>
       <Text fontSize={{ base: "4xl", md: "7xl" }} color={themeColor} textTransform="uppercase" letterSpacing="widest">
         FEATURED
       </Text>
@@ -42,7 +43,9 @@ export default function Projects() {
           doloribus nihil, veniam animi porro possimus at impedit placeat hic similique architecto excepturi voluptate
           facere molestiae explicabo!
         </ProjectCard>
-        <Text>See More...</Text>
+        <Link href={"/projects"}>
+          <Text fontSize="xl">See More...</Text>
+        </Link>
       </Flex>
     </Flex>
   );
