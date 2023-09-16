@@ -38,7 +38,7 @@ export const projectData: Project[] = [
     source: "/",
   },
   {
-    title: "Unamed mobile app",
+    title: "Unnamed mobile app",
     description:
       "Upcoming mobile app to be made with Flutter. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Dart", "Flutter", "Firebase"],
@@ -47,7 +47,7 @@ export const projectData: Project[] = [
     live: "/",
   },
   {
-    title: "Unamed AI Project",
+    title: "Unnamed AI Project",
     description:
       "Planned project utilizing TensorFlow with Python. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Python", "TensorFlow"],
