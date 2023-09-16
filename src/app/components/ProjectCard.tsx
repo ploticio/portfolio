@@ -65,7 +65,10 @@ const ProjectCard: React.FC<Project> = ({ title, description, skills, status, pl
                 Planned
               </Badge>
             ) : null}
-            <Text>{description}</Text>
+
+            <Text textAlign="center" fontSize="lg">
+              {description}
+            </Text>
 
             <HStack mt="3" width={200}>
               {live && (

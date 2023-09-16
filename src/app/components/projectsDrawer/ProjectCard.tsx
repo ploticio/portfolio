@@ -44,7 +44,7 @@ export default function ProjectCard({ title, description, skills, platform, stat
               Planned
             </Badge>
           ) : null}
-          <Text>{description}</Text>
+          <Text textAlign="center">{description}</Text>
           <HStack mt="3">
             {live && (
               <Link href={live} rel="noopener noreferrer" target="_blank">

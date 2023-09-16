@@ -1,12 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardBody, Container, Flex, Stack, StackDivider, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Container,
+  Flex,
+  HStack,
+  Stack,
+  StackDivider,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Skills from "./Skills";
 import FrogIcon from "../FrogIcon";
 
 export default function About() {
   const textColor = useColorModeValue("emerald.700", "white");
+  const nameColor = useColorModeValue("emerald.700", "darkEmerald");
 
   return (
     <Flex direction="column" justify="center" align="center" pos="relative" minH="50vh">
@@ -19,7 +30,7 @@ export default function About() {
               flexDir="column"
               justifyContent="center"
               alignItems="center"
-              gap={10}
+              gap={4}
             >
               <Image
                 src="/treefrog.png"
@@ -28,12 +39,20 @@ export default function About() {
                 height={150}
                 style={{ border: "1px", borderStyle: "solid", borderRadius: "100%", borderColor: "#15803d" }}
               />
-              <Text pt="2" fontSize="lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi quo ratione vero veniam soluta, adipisci
-                molestias quidem cum mollitia deleniti facilis dolor deserunt id iusto molestiae, numquam tempora culpa.
-                Laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quo minus beatae
-                impedit. Possimus beatae error perspiciatis hic officiis, modi, praesentium excepturi eos iusto
-                architecto dolorum distinctio ducimus. Delectus, quae.
+              <HStack pt="2" spacing={1}>
+                <Text fontSize="lg">Hi, my name&apos;s</Text>
+                <Text fontSize="lg" color={nameColor}>
+                  Darren.
+                </Text>
+                <Text fontSize="lg">Welcome to my showcase.</Text>
+              </HStack>
+
+              <Text fontSize="lg">
+                I&apos;m a software developer based in the Bay Area with a passion for making things. Here you&apos;ll
+                find some of the projects that I&apos;ve been working on. Outside of work, some things I enjoy are
+                cooking, teaching, video games, and history (big history buff). Also a big fan of frogs 🐸. While
+                you&apos;re here, check out some of the games I&apos;ve made; making video games is a creative outlet
+                for me, and you can definetly come to expect more.
               </Text>
             </Container>
             <Container maxW="md">
