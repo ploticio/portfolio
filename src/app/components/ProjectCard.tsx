@@ -16,19 +16,9 @@ import {
 import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import React from "react";
+import { Project } from "../data/projectData";
 
-type Props = {
-  title: string;
-  skills: string[];
-  platform?: "desktop" | "mobile" | "both";
-  image?: { src: string; width: number; height: number };
-  placeholder?: boolean;
-  live?: string;
-  source?: string;
-  children: React.ReactNode;
-};
-
-const ProjectCard: React.FC<Props> = ({ title, skills, platform, image, placeholder, live, source, children }) => {
+const ProjectCard: React.FC<Project> = ({ title, description, skills, platform, image, live, source }) => {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
@@ -36,14 +26,7 @@ const ProjectCard: React.FC<Props> = ({ title, skills, platform, image, placehol
         <Stack direction={{ base: "column", md: "row" }} divider={<StackDivider />} spacing="4">
           {image && (
             <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
-              <Image src={image} alt={`${title} project image`} width={image.width} height={image.height} />
-            </Container>
-          )}
-          {placeholder && (
-            <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt laudantium quod placeat, tempora vel id
-              animi, ipsa aliquid dolores fugiat ipsam consequatur, ab architecto accusantium recusandae? Quisquam
-              asperiores cumque modi.
+              <Image src={image} alt={`${title} project image`} width={400} height={400} />
             </Container>
           )}
           <Container
@@ -71,7 +54,7 @@ const ProjectCard: React.FC<Props> = ({ title, skills, platform, image, placehol
               </HStack>
             </Flex>
 
-            <Text>{children}</Text>
+            <Text>{description}</Text>
 
             <HStack mt="3" width={200}>
               {live && (

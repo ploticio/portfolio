@@ -28,7 +28,7 @@ export default function FormContact({ onCancel }: { onCancel: () => void }) {
       toast({
         title: "Email sent!",
         status: "success",
-        duration: 2000,
+        duration: 1500,
         isClosable: true,
       });
     }

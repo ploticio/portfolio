@@ -1,51 +1,53 @@
 "use client";
-import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  Text,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react";
 import ProjectCard from "../ProjectCard";
-import { Link } from "@chakra-ui/next-js";
+import BackButton from "../projectsDrawer/BackButton";
+import Catalog from "../projectsDrawer/Catalog";
+import { projectData } from "@/app/data/projectData";
 
 export default function Projects() {
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex direction="column" justify="center" align="center" minH="100vh" gap={4}>
       <Text fontSize={{ base: "4xl", md: "7xl" }} color={themeColor} textTransform="uppercase" letterSpacing="widest">
         FEATURED
       </Text>
       <Flex direction="column" justify="center" align="center" gap={10}>
-        <ProjectCard
-          title="Blackjack"
-          skills={["TypeScript", "React", "Framer Motion"]}
-          image={{ src: "/projectImages/blackjack.gif", width: 400, height: 225 }}
-          live="https://ploticio.github.io/blackjack/"
-          source="https://github.com/ploticio/blackjack"
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa nemo expedita sapiente eius accusantium.
-          Doloribus labore soluta assumenda accusamus quisquam. Recusandae, porro? Nam earum voluptates, quam officia
-          nemo quisquam rem!
-        </ProjectCard>
-        <ProjectCard title="Blobboi" skills={["C#", "Unity Engine"]} platform="desktop" placeholder live="/">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quam ducimus. Quis eos reprehenderit similique
-          id soluta earum temporibus iusto numquam assumenda. Accusantium quas quos quidem molestiae. Illo, soluta
-          dolorum!
-        </ProjectCard>
-        <ProjectCard title="Unamed Discord Bot" skills={["TypeScript", "discord.js"]} placeholder live="/" source="/">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt accusamus quae magni, autem laboriosam
-          quidem placeat laborum totam esse exercitationem fugiat inventore nulla eaque perferendis voluptas, dolore a
-          sequi!
-        </ProjectCard>
-        <ProjectCard
-          title="Unamed mobile app"
-          platform="mobile"
-          skills={["C#", "Unity Engine", "Firebase"]}
-          placeholder
-          live="/"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, assumenda dolorum? Ut laudantium
-          doloribus nihil, veniam animi porro possimus at impedit placeat hic similique architecto excepturi voluptate
-          facere molestiae explicabo!
-        </ProjectCard>
-        <Link href={"/projects"}>
+        {projectData.slice(0, 4).map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            skills={project.skills}
+            platform={project.platform}
+            image={project.image}
+            live={project.live}
+            source={project.source}
+          />
+        ))}
+        <Button variant="ghost" colorScheme="green" onClick={onOpen}>
           <Text fontSize="xl">See More...</Text>
-        </Link>
+        </Button>
+        <Drawer onClose={onClose} isOpen={isOpen} size="full" placement="bottom">
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerBody>
+              <BackButton close={onClose} />
+              <Catalog />
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Flex>
     </Flex>
   );

@@ -32,14 +32,13 @@ export default function Contact() {
             <Icon as={GitHubLogoIcon} h={50} w={50} />
           </Button>
         </Link>
-
         <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} closeOnBlur={false}>
           <PopoverTrigger>
             <Button width={75} height={75} variant="ghost" colorScheme="green" border="1px" borderRadius="100%">
               <Icon as={EnvelopeClosedIcon} h={50} w={50} />
             </Button>
           </PopoverTrigger>
-          <PopoverContent p={5}>
+          <PopoverContent p={5} w={{ md: 500 }}>
             <PopoverArrow />
             <PopoverCloseButton />
             <FormContact onCancel={onClose} />
