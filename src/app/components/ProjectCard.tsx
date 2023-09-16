@@ -1,6 +1,7 @@
 "use client";
 import { Link } from "@chakra-ui/next-js";
 import {
+  Badge,
   Button,
   Card,
   CardBody,
@@ -18,7 +19,7 @@ import Image from "next/image";
 import React from "react";
 import { Project } from "../data/projectData";
 
-const ProjectCard: React.FC<Project> = ({ title, description, skills, platform, image, live, source }) => {
+const ProjectCard: React.FC<Project> = ({ title, description, skills, status, platform, image, live, source }) => {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
@@ -54,6 +55,16 @@ const ProjectCard: React.FC<Project> = ({ title, description, skills, platform, 
               </HStack>
             </Flex>
 
+            {status === "inprogress" ? (
+              <Badge pos={{ md: "absolute" }} right={4} variant="subtle" colorScheme="green">
+                Current
+              </Badge>
+            ) : null}
+            {status === "planned" ? (
+              <Badge pos={{ md: "absolute" }} right={4} variant="outline" colorScheme="green">
+                Planned
+              </Badge>
+            ) : null}
             <Text>{description}</Text>
 
             <HStack mt="3" width={200}>

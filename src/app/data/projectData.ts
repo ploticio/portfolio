@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   skills: string[];
   platform?: "desktop" | "mobile" | undefined;
+  status?: "inprogress" | "planned" | undefined;
   image?: string | undefined;
   live?: string | undefined;
   source?: string | undefined;
@@ -32,6 +33,7 @@ export const projectData: Project[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt accusamus quae magni, autem laboriosam quidem placeat laborum totam esse exercitationem fugiat inventore nulla eaque perferendis voluptas, dolore a sequi!",
     skills: ["TypeScript", "discord.js"],
+    status: "inprogress",
     live: "/",
     source: "/",
   },
@@ -41,13 +43,15 @@ export const projectData: Project[] = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, assumenda dolorum? Ut laudantium doloribus nihil, veniam animi porro possimus at impedit placeat hic similique architecto excepturi voluptate facere molestiae explicabo!",
     skills: ["C#", "Unity Engine", "Firebase"],
     platform: "mobile",
+    status: "planned",
     live: "/",
   },
   {
-    title: "Test",
+    title: "Unamed AI Project",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
-    skills: [""],
+    skills: ["Python", "TensorFlow"],
+    status: "planned",
     live: "/",
     source: "/",
   },

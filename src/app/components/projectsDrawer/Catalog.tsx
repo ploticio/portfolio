@@ -20,6 +20,7 @@ export default function Catalog() {
               description={project.description}
               skills={project.skills}
               platform={project.platform}
+              status={project.status}
               image={project.image}
               live={project.live}
               source={project.source}

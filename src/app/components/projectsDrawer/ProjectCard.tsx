@@ -1,6 +1,7 @@
 "use client";
 import { Project } from "@/app/data/projectData";
 import {
+  Badge,
   Button,
   Card,
   CardBody,
@@ -16,10 +17,10 @@ import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radi
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProjectCard({ title, description, skills, platform, image, live, source }: Project) {
+export default function ProjectCard({ title, description, skills, platform, status, image, live, source }: Project) {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
-    <Card maxW="lg" boxShadow="lg">
+    <Card maxW="lg" boxShadow="lg" border="1px" borderColor="blackAlpha.100">
       <CardBody>
         <Stack align="center" gap={2}>
           {image && <Image src={image} alt={`${title} project image`} width={500} height={500} />}
@@ -33,6 +34,16 @@ export default function ProjectCard({ title, description, skills, platform, imag
               </Text>
             ))}
           </HStack>
+          {status === "inprogress" ? (
+            <Badge pos={{ md: "absolute" }} right={4} variant="subtle" colorScheme="green">
+              Current
+            </Badge>
+          ) : null}
+          {status === "planned" ? (
+            <Badge pos={{ md: "absolute" }} right={4} variant="outline" colorScheme="green">
+              Planned
+            </Badge>
+          ) : null}
           <Text>{description}</Text>
           <HStack mt="3">
             {live && (
