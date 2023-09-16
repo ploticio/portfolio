@@ -3,7 +3,7 @@ export type Project = {
   description: string;
   skills: string[];
   platform?: "desktop" | "mobile" | undefined;
-  status?: "inprogress" | "planned" | undefined;
+  status?: "ongoing" | "planned" | undefined;
   image?: string | undefined;
   width?: number | undefined;
   placeholder?: boolean | undefined;
@@ -16,7 +16,7 @@ export const projectData: Project[] = [
     title: "Blackjack",
     description:
       "My first project with React. Fully fledged Blackjack with options for H17 / S17, sum counters, and number of decks in the shoe. Supports splitting and doubling.",
-    skills: ["Typescript", "React", "Framer Motion"],
+    skills: ["TypeScript", "React", "Framer Motion"],
     image: "/projectImages/blackjack.gif",
     live: "https://ploticio.github.io/blackjack/",
     source: "https://github.com/ploticio/blackjack",
@@ -35,10 +35,8 @@ export const projectData: Project[] = [
     description:
       "Discord bot written in TypeScript with the discord.js library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
     skills: ["TypeScript", "discord.js"],
-    status: "inprogress",
+    status: "ongoing",
     placeholder: true,
-    live: "/",
-    source: "/",
   },
   {
     title: "Unnamed mobile app",
@@ -48,7 +46,6 @@ export const projectData: Project[] = [
     platform: "mobile",
     placeholder: true,
     status: "planned",
-    live: "/",
   },
   {
     title: "Unnamed AI Project",
@@ -57,12 +54,10 @@ export const projectData: Project[] = [
     skills: ["Python", "TensorFlow"],
     status: "planned",
     placeholder: true,
-    live: "/",
-    source: "/",
   },
   {
     title: "RPG Master",
-    description: "2D roleplaying game built entirely from scratch using Java and its GUI libraries",
+    description: "2D roleplaying game built entirely from scratch using Java and its GUI toolkit",
     skills: ["Java"],
     image: "/projectImages/rpgmaster.png",
     width: 200,

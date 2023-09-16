@@ -64,23 +64,20 @@ const ProjectCard: React.FC<Project> = ({
                   </Text>
                 ))}
               </HStack>
+              {status === "ongoing" ? (
+                <Badge mt={1} variant="subtle" colorScheme="green">
+                  Ongoing
+                </Badge>
+              ) : null}
+              {status === "planned" ? (
+                <Badge mt={1} variant="outline" colorScheme="green">
+                  Planned
+                </Badge>
+              ) : null}
             </Flex>
-
-            {status === "inprogress" ? (
-              <Badge pos={{ md: "absolute" }} right={4} variant="subtle" colorScheme="green">
-                Current
-              </Badge>
-            ) : null}
-            {status === "planned" ? (
-              <Badge pos={{ md: "absolute" }} right={4} variant="outline" colorScheme="green">
-                Planned
-              </Badge>
-            ) : null}
-
             <Text textAlign="center" fontSize="lg">
               {description}
             </Text>
-
             <HStack mt="3" width={200}>
               {live && (
                 <Link href={live} rel="noopener noreferrer" target="_blank" width="100%">

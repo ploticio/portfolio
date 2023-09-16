@@ -51,13 +51,13 @@ export default function ProjectCard({
               </Text>
             ))}
           </HStack>
-          {status === "inprogress" ? (
-            <Badge pos={{ md: "absolute" }} right={4} variant="subtle" colorScheme="green">
-              Current
+          {status === "ongoing" ? (
+            <Badge mt={2} variant="subtle" colorScheme="green">
+              Ongoing
             </Badge>
           ) : null}
           {status === "planned" ? (
-            <Badge pos={{ md: "absolute" }} right={4} variant="outline" colorScheme="green">
+            <Badge mt={2} variant="outline" colorScheme="green">
               Planned
             </Badge>
           ) : null}
