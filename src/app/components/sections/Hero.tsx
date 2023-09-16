@@ -80,7 +80,7 @@ export default function Hero() {
         backgroundColor={themeColor}
         h="50vh"
         w="150vw"
-        top="70vh"
+        top="65vh"
         left="-33%"
       />
     </>

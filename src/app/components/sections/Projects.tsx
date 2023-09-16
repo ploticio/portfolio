@@ -33,11 +33,12 @@ export default function Projects() {
             platform={project.platform}
             status={project.status}
             image={project.image}
+            placeholder={project.placeholder}
             live={project.live}
             source={project.source}
           />
         ))}
-        <Button variant="ghost" colorScheme="green" onClick={onOpen}>
+        <Button variant="outline" colorScheme="green" onClick={onOpen}>
           <Text fontSize="xl">See More...</Text>
         </Button>
         <Drawer onClose={onClose} isOpen={isOpen} size="full" placement="bottom">

@@ -5,6 +5,8 @@ export type Project = {
   platform?: "desktop" | "mobile" | undefined;
   status?: "inprogress" | "planned" | undefined;
   image?: string | undefined;
+  width?: number | undefined;
+  placeholder?: boolean | undefined;
   live?: string | undefined;
   source?: string | undefined;
 };
@@ -34,6 +36,7 @@ export const projectData: Project[] = [
       "Discord bot written in TypeScript with the discord.js library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
     skills: ["TypeScript", "discord.js"],
     status: "inprogress",
+    placeholder: true,
     live: "/",
     source: "/",
   },
@@ -43,6 +46,7 @@ export const projectData: Project[] = [
       "Upcoming mobile app to be made with Flutter. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Dart", "Flutter", "Firebase"],
     platform: "mobile",
+    placeholder: true,
     status: "planned",
     live: "/",
   },
@@ -52,7 +56,17 @@ export const projectData: Project[] = [
       "Planned project utilizing TensorFlow with Python. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Python", "TensorFlow"],
     status: "planned",
+    placeholder: true,
     live: "/",
     source: "/",
+  },
+  {
+    title: "RPG Master",
+    description: "2D roleplaying game built entirely from scratch using Java and its GUI libraries",
+    skills: ["Java"],
+    image: "/projectImages/rpgmaster.png",
+    width: 200,
+    platform: "desktop",
+    source: "https://github.com/ploticio/RPG",
   },
 ];

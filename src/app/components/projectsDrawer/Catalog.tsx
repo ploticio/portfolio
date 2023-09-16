@@ -22,6 +22,7 @@ export default function Catalog() {
               platform={project.platform}
               status={project.status}
               image={project.image}
+              width={project.width}
               live={project.live}
               source={project.source}
             />

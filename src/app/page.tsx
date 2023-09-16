@@ -4,6 +4,7 @@ import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import ColorSwitch from "./components/ColorSwitch";
 import Ending from "./components/sections/Ending";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <section id="contact">
         <Contact />
       </section>
-      <Ending />
+      {/* <Ending /> */}
+      <Footer />
       <ColorSwitch />
     </main>
   );

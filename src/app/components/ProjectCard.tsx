@@ -19,7 +19,17 @@ import Image from "next/image";
 import React from "react";
 import { Project } from "../data/projectData";
 
-const ProjectCard: React.FC<Project> = ({ title, description, skills, status, platform, image, live, source }) => {
+const ProjectCard: React.FC<Project> = ({
+  title,
+  description,
+  skills,
+  status,
+  platform,
+  image,
+  placeholder,
+  live,
+  source,
+}) => {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
@@ -30,6 +40,7 @@ const ProjectCard: React.FC<Project> = ({ title, description, skills, status, pl
               <Image src={image} alt={`${title} project image`} width={400} height={400} />
             </Container>
           )}
+          {placeholder && <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center" />}
           <Container
             maxW="container.xl"
             display="flex"

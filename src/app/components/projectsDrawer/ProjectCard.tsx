@@ -17,13 +17,30 @@ import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radi
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProjectCard({ title, description, skills, platform, status, image, live, source }: Project) {
+export default function ProjectCard({
+  title,
+  description,
+  skills,
+  platform,
+  status,
+  image,
+  width,
+  live,
+  source,
+}: Project) {
   const textColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
     <Card maxW="lg" boxShadow="lg" border="1px" borderColor="blackAlpha.100">
       <CardBody>
         <Stack align="center" gap={2}>
-          {image && <Image src={image} alt={`${title} project image`} width={500} height={500} />}
+          {image && (
+            <Image
+              src={image}
+              alt={`${title} project image`}
+              width={width ? width : 500}
+              height={width ? width : 500}
+            />
+          )}
           <Text fontSize="2xl" textTransform="uppercase" letterSpacing="widest">
             {title}
           </Text>

@@ -8,7 +8,7 @@ import { EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 export default function Contact() {
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
   return (
-    <Flex direction="column" align="center" minH="60vh" gap={4}>
+    <Flex direction="column" justify="center" align="center" minH="15vh" gap={4}>
       <Text fontSize={{ base: "4xl", md: "5xl" }} color={themeColor} textTransform="uppercase" letterSpacing="widest">
         [ Get in touch ]
       </Text>

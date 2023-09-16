@@ -40,11 +40,11 @@ export default function About() {
                 style={{ border: "1px", borderStyle: "solid", borderRadius: "100%", borderColor: "#15803d" }}
               />
               <HStack pt="2" spacing={1}>
-                <Text fontSize="lg">Hi, my name&apos;s</Text>
-                <Text fontSize="lg" color={nameColor}>
+                <Text fontSize={{ base: "sm", md: "lg" }}>Hi, my name&apos;s</Text>
+                <Text fontSize={{ base: "sm", md: "lg" }} color={nameColor}>
                   Darren.
                 </Text>
-                <Text fontSize="lg">Welcome to my showcase.</Text>
+                <Text fontSize={{ base: "sm", md: "lg" }}>Welcome to my showcase.</Text>
               </HStack>
 
               <Text fontSize="lg">
