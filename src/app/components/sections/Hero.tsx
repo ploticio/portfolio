@@ -15,7 +15,6 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
   const newY = useTransform(scrollYProgress, [0, 1], ["0%", "675%"]);
-  const mobileY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   const match = useMediaQuery();
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
 
@@ -27,7 +26,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           // @ts-ignore
           transition={{ duration: 1 }}
-          style={{ y: match ? newY : mobileY }}
+          style={{ y: match ? newY : undefined }}
           display="flex"
           flexDirection="column"
           position="absolute"

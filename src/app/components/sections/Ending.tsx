@@ -17,7 +17,6 @@ export default function Ending() {
     offset: ["start end", "center start"],
   });
   const newY = useTransform(scrollYProgress, [0, 1], ["0%", "1000%"]);
-  const mobileY = useTransform(scrollYProgress, [0, 1], ["0%", "675%"]);
   const match = useMediaQuery();
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
 
@@ -34,7 +33,7 @@ export default function Ending() {
       />
       <Box ref={ref} pos="relative" minH="100vh">
         <MotionBox
-          style={{ y: match ? newY : mobileY }}
+          style={{ y: match ? newY : 0 }}
           display="flex"
           flexDirection="column"
           position="absolute"
