@@ -52,7 +52,7 @@ export default function About() {
                 find some of the projects that I&apos;ve been working on. Outside of work, some things I enjoy are
                 cooking, teaching, video games, and history (big history buff). Also a big fan of frogs 🐸. While
                 you&apos;re here, check out some of the games I&apos;ve made; making video games is a creative outlet
-                for me, and you can definetly come to expect more.
+                for me, and you can definitely come to expect more.
               </Text>
             </Container>
             <Container maxW="md">

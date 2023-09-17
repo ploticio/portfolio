@@ -36,7 +36,7 @@ export const projectData: Project[] = [
       "Discord bot written in TypeScript with the discord.js library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
     skills: ["TypeScript", "discord.js"],
     status: "ongoing",
-    placeholder: true,
+    image: "/projectImages/discordjs.svg",
   },
   {
     title: "Unnamed mobile app",
@@ -44,7 +44,8 @@ export const projectData: Project[] = [
       "Upcoming mobile app to be made with Flutter. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Dart", "Flutter", "Firebase"],
     platform: "mobile",
-    placeholder: true,
+    image: "/projectImages/flutter.png",
+    width: 150,
     status: "planned",
   },
   {
@@ -53,7 +54,8 @@ export const projectData: Project[] = [
       "Planned project utilizing TensorFlow with Python. Enjoy some Lorem ipsum while I work on it: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam officia ducimus expedita autem ut dolores tempore voluptatum tempora debitis eveniet ipsum incidunt doloribus repellendus, possimus, maiores excepturi rerum. Perferendis, veritatis.",
     skills: ["Python", "TensorFlow"],
     status: "planned",
-    placeholder: true,
+    image: "/projectImages/tensorflow.svg",
+    width: 300,
   },
   {
     title: "RPG Master",

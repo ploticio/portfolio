@@ -33,6 +33,7 @@ export default function Projects() {
             platform={project.platform}
             status={project.status}
             image={project.image}
+            width={project.width}
             placeholder={project.placeholder}
             live={project.live}
             source={project.source}
