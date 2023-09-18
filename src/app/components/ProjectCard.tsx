@@ -27,7 +27,6 @@ const ProjectCard: React.FC<Project> = ({
   platform,
   image,
   width,
-  placeholder,
   live,
   source,
 }) => {
@@ -36,7 +35,7 @@ const ProjectCard: React.FC<Project> = ({
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
       <CardBody>
         <Stack direction={{ base: "column", md: "row" }} divider={<StackDivider />} spacing="4">
-          {image && (
+          {image ? (
             <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
               {width ? (
                 <Image src={image} alt={`${title} project image`} width={width} height={width} />
@@ -44,8 +43,9 @@ const ProjectCard: React.FC<Project> = ({
                 <Image src={image} alt={`${title} project image`} width={400} height={400} />
               )}
             </Container>
+          ) : (
+            <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center" />
           )}
-          {placeholder && <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center" />}
           <Container
             maxW="container.xl"
             display="flex"

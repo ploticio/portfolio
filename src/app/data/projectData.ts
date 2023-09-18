@@ -6,7 +6,6 @@ export type Project = {
   status?: "ongoing" | "planned" | undefined;
   image?: string | undefined;
   width?: number | undefined;
-  placeholder?: boolean | undefined;
   live?: string | undefined;
   source?: string | undefined;
 };
@@ -33,10 +32,11 @@ export const projectData: Project[] = [
   {
     title: "BetterVoting",
     description:
-      "Discord bot written in TypeScript with the discord.js library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
-    skills: ["TypeScript", "discord.js"],
+      "Discord bot written in Python using the discord.py library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
+    skills: ["Python", "discord.py"],
+    image: "/projectImages/discordpy.png",
+    width: 150,
     status: "ongoing",
-    image: "/projectImages/discordjs.svg",
   },
   {
     title: "Unnamed mobile app",
@@ -46,7 +46,7 @@ export const projectData: Project[] = [
     platform: "mobile",
     image: "/devicons/react.svg",
     width: 150,
-    status: "planned",
+    status: "ongoing",
   },
   {
     title: "Unnamed AI Project",
@@ -59,10 +59,10 @@ export const projectData: Project[] = [
   },
   {
     title: "RPG Master",
-    description: "2D roleplaying game built entirely from scratch using Java and its GUI toolkit",
+    description: "2D roleplaying game built entirely from scratch using Java and its GUI toolkit, Java Swing",
     skills: ["Java"],
-    image: "/projectImages/rpgmaster.png",
-    width: 200,
+    image: "/projectImages/rpgmaster.gif",
+    width: 250,
     platform: "desktop",
     source: "https://github.com/ploticio/RPG",
   },
