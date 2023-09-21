@@ -3,7 +3,7 @@ import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import ColorSwitch from "./components/ColorSwitch";
-import Ending from "./components/sections/Ending";
+// import Ending from "./components/sections/Ending";
 import Footer from "./components/sections/Footer";
 
 export default function Home() {

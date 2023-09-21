@@ -14,13 +14,13 @@ export default function Skills() {
         <SkillIcon image="/devicons/react.svg" label="React" />
       </WrapItem>
       <WrapItem>
-        <SkillIcon image="/devicons/chakra.svg" label="Chakra UI" />
-      </WrapItem>
-      <WrapItem>
         <SkillIcon image="/devicons/nextjs.svg" label="NextJS" />
       </WrapItem>
       <WrapItem>
         <SkillIcon image="/devicons/firebase.svg" label="Firebase" />
+      </WrapItem>
+      <WrapItem>
+        <SkillIcon image="/devicons/postgre.svg" label="PostgreSQL" />
       </WrapItem>
       <WrapItem>
         <SkillIcon image="/devicons/csharp.svg" label="C#" />

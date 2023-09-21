@@ -30,7 +30,7 @@ const ProjectCard: React.FC<Project> = ({
   live,
   source,
 }) => {
-  const textColor = useColorModeValue("emerald.700", "darkEmerald");
+  const textColor = useColorModeValue("emerald.600", "darkEmerald");
   return (
     <Card border="1px" borderColor="blackAlpha.100" boxShadow="xl">
       <CardBody>
