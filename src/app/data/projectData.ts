@@ -47,7 +47,8 @@ export const projectData: Project[] = [
     image: "/projectImages/fastapi.svg",
     width: 250,
     status: "ongoing",
-    source: "/",
+    source: "https://github.com/ploticio/EasternProverbsAPI",
+    live: "https://eastern-proverbs-api.onrender.com/docs",
   },
   {
     title: "BetterVoting",
