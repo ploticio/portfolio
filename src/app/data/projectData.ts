@@ -30,15 +30,34 @@ export const projectData: Project[] = [
     live: "https://ploticio.itch.io/blobboi",
   },
   {
-    title: "Eastern Proverbs API",
+    title: "Eastern Proverbs ⛩️",
     description:
-      "REST API written in Python with FastAPI. Contains a collection of various proverbs from East Asia⛩️. Uses PostgreSQL and follows OpenAPI specifications. Hosted with AWS Lambda",
-    skills: ["Python", "FastAPI", "PostgreSQL"],
-    image: "/devicons/python.svg",
+      "Full-stack mobile app that shows users a collection of various proverbs from Asia. Sends quotes to users for daily inspiration and wisdom. Front-end created with React Native, back-end done with FastAPI and PostgreSQL.",
+    skills: ["React Native", "FastAPI", "PostgreSQL"],
+    platform: "mobile",
+    image: "/devicons/react.svg",
     width: 150,
     status: "ongoing",
   },
-
+  {
+    title: "Eastern Proverbs API",
+    description:
+      "Public REST API written in Python using the FastAPI framework. Contains a collection of various proverbs from Asia. Uses PostgreSQL and follows OpenAPI specifications.",
+    skills: ["Python", "FastAPI", "PostgreSQL"],
+    image: "/projectImages/fastapi.svg",
+    width: 250,
+    status: "ongoing",
+    source: "/",
+  },
+  {
+    title: "BetterVoting",
+    description:
+      "Discord bot written in Python using the discord.py library. Facilitates voting and elections in Discord servers with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
+    skills: ["Python", "discord.py"],
+    image: "/projectImages/discordpy.png",
+    width: 150,
+    status: "planned",
+  },
   {
     title: "Unnamed mobile app",
     description:
@@ -46,15 +65,6 @@ export const projectData: Project[] = [
     skills: ["Unity Engine", "Firebase"],
     platform: "mobile",
     image: "/devicons/unity.svg",
-    width: 150,
-    status: "planned",
-  },
-  {
-    title: "BetterVoting",
-    description:
-      "Discord bot written in Python using the discord.py library. Facilitates voting and elections in Discord servers, with the ability to choose between various voting styles. Includes STAR voting, a new and innovative voting method that maximizes voter satisfaction and accuracy. (More at www.equal.vote)",
-    skills: ["Python", "discord.py"],
-    image: "/projectImages/discordpy.png",
     width: 150,
     status: "planned",
   },

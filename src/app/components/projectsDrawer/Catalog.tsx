@@ -12,7 +12,7 @@ export default function Catalog() {
         Projects
       </Text>
 
-      <Wrap ml={{ md: 28 }} spacing={8} align="center">
+      <Wrap ml={{ md: 36 }} spacing={8} align="center">
         {projectData.map((project, index) => (
           <WrapItem key={index}>
             <ProjectCard

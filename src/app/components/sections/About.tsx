@@ -49,10 +49,10 @@ export default function About() {
 
               <Text fontSize="lg">
                 I&apos;m a software developer based in the Bay Area with a passion for making things. Here you&apos;ll
-                find some of the projects that I&apos;ve been working on. Outside of work, some things I enjoy are
-                cooking, teaching, video games, and history (big history buff). Also a big fan of frogs 🐸. While
-                you&apos;re here, check out some of the games I&apos;ve made; making video games is a creative outlet
-                for me, and you can definitely come to expect more.
+                find some of the projects that I&apos;ve been working on. Outside of work, I enjoy cooking, teaching,
+                video games, and history (big history buff). Also a big fan of frogs 🐸. While you&apos;re here, check
+                out some of the games I&apos;ve made; making video games is a creative outlet for me, and you can
+                definitely come to expect more.
               </Text>
             </Container>
             <Container maxW="md">
