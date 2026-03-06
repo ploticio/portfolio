@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Icon, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 

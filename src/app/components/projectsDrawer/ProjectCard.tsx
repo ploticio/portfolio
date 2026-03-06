@@ -1,4 +1,3 @@
-"use client";
 import { Project } from "@/app/data/projectData";
 import {
   Badge,
@@ -8,14 +7,13 @@ import {
   Divider,
   HStack,
   Icon,
+  Link,
   Stack,
   StackDivider,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function ProjectCard({
   title,
@@ -34,12 +32,7 @@ export default function ProjectCard({
       <CardBody>
         <Stack align="center" gap={2}>
           {image && (
-            <Image
-              src={image}
-              alt={`${title} project image`}
-              width={width ? width : 500}
-              height={width ? width : 500}
-            />
+            <img src={image} alt={`${title} project image`} width={width ?? 500} height={width ?? 500} />
           )}
           <Text fontSize="2xl" textTransform="uppercase" letterSpacing="widest">
             {title}

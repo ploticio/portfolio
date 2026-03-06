@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import {
   Card,
   CardBody,
@@ -32,7 +29,7 @@ export default function About() {
               alignItems="center"
               gap={4}
             >
-              <Image
+              <img
                 src="/treefrog.png"
                 alt="frog"
                 width={150}

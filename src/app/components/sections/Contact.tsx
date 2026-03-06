@@ -1,9 +1,5 @@
-"use client";
-
-import { Link } from "@chakra-ui/next-js";
-import { Button, Flex, Icon, Stack, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
+import { Button, Flex, Icon, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-// import FormContact from "../FormContact";
 
 export default function Contact() {
   const themeColor = useColorModeValue("emerald.700", "darkEmerald");
@@ -23,7 +19,6 @@ export default function Contact() {
             <Icon as={EnvelopeClosedIcon} h={50} w={50} />
           </Button>
         </a>
-        {/* <FormContact /> */}
       </Stack>
     </Flex>
   );

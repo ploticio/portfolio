@@ -1,5 +1,3 @@
-"use client";
-
 import { Stack, Text, Wrap, WrapItem, useColorModeValue } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import { projectData } from "@/app/data/projectData";

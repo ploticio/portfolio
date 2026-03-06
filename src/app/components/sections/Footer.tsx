@@ -1,7 +1,4 @@
-"use client";
-
-import { Link } from "@chakra-ui/next-js";
-import { Box, HStack, Icon, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, HStack, Icon, Link, Text, useColorModeValue } from "@chakra-ui/react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export default function Footer() {

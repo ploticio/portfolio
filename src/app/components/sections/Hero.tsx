@@ -1,4 +1,3 @@
-"use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Box, Flex, Text, chakra, shouldForwardProp, useColorModeValue } from "@chakra-ui/react";
 import { isValidMotionProp, motion, useScroll, useTransform } from "framer-motion";

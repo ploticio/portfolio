@@ -1,11 +1,7 @@
-"use client";
-
 import { Button, Icon } from "@chakra-ui/react";
-import { ArrowDownIcon } from "@radix-ui/react-icons";
-import { useRouter } from "next/navigation";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 export default function BackButton({ close }: { close: () => void }) {
-  const router = useRouter();
   return (
     <Button
       position="fixed"
@@ -16,7 +12,7 @@ export default function BackButton({ close }: { close: () => void }) {
       colorScheme="green"
       onClick={close}
     >
-      <Icon as={ArrowDownIcon} />
+      <Icon as={ArrowLeftIcon} />
     </Button>
   );
 }
