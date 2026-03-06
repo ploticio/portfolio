@@ -1,7 +1,5 @@
-"use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { Link } from "@chakra-ui/next-js";
-import { Box, HStack, Icon, Text, chakra, shouldForwardProp, useColorModeValue } from "@chakra-ui/react";
+import { Box, HStack, Icon, Link, Text, chakra, shouldForwardProp, useColorModeValue } from "@chakra-ui/react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { isValidMotionProp, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";

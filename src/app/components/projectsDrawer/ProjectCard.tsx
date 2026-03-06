@@ -1,4 +1,3 @@
-"use client";
 import { Project } from "@/app/data/projectData";
 import {
   Badge,
@@ -14,8 +13,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function ProjectCard({
   title,
@@ -34,11 +31,12 @@ export default function ProjectCard({
       <CardBody>
         <Stack align="center" gap={2}>
           {image && (
-            <Image
+            <img
               src={image}
               alt={`${title} project image`}
               width={width ? width : 500}
               height={width ? width : 500}
+              loading="lazy"
             />
           )}
           <Text fontSize="2xl" textTransform="uppercase" letterSpacing="widest">
@@ -64,24 +62,24 @@ export default function ProjectCard({
           <Text textAlign="center">{description}</Text>
           <HStack mt="3">
             {live && (
-              <Link href={live} rel="noopener noreferrer" target="_blank">
+              <a href={live} rel="noopener noreferrer" target="_blank">
                 <Button colorScheme="green" variant="solid" width="100%">
                   <HStack>
                     <Text letterSpacing="widest">Link</Text>
                     <Icon as={ExternalLinkIcon} />
                   </HStack>
                 </Button>
-              </Link>
+              </a>
             )}
             {source && (
-              <Link href={source} rel="noopener noreferrer" target="_blank">
+              <a href={source} rel="noopener noreferrer" target="_blank">
                 <Button colorScheme="green" variant="ghost" width="100%">
                   <HStack>
                     <Text letterSpacing="wide">Source</Text>
                     <Icon as={GitHubLogoIcon} />
                   </HStack>
                 </Button>
-              </Link>
+              </a>
             )}
           </HStack>
           <Divider />

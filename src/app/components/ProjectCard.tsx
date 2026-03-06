@@ -1,5 +1,3 @@
-"use client";
-import { Link } from "@chakra-ui/next-js";
 import {
   Badge,
   Button,
@@ -9,13 +7,13 @@ import {
   Flex,
   HStack,
   Icon,
+  Link,
   Stack,
   StackDivider,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { DesktopIcon, ExternalLinkIcon, GitHubLogoIcon, MobileIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 import React from "react";
 import { Project } from "../data/projectData";
 
@@ -38,9 +36,9 @@ const ProjectCard: React.FC<Project> = ({
           {image ? (
             <Container maxW="container.sm" display="flex" justifyContent="center" alignItems="center">
               {width ? (
-                <Image src={image} alt={`${title} project image`} width={width} height={width} />
+                <img src={image} alt={`${title} project image`} width={width} height={width} loading="lazy" />
               ) : (
-                <Image src={image} alt={`${title} project image`} width={400} height={400} />
+                <img src={image} alt={`${title} project image`} width={400} height={400} loading="lazy" />
               )}
             </Container>
           ) : (

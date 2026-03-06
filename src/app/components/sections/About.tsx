@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import {
   Card,
   CardBody,
@@ -32,11 +29,12 @@ export default function About() {
               alignItems="center"
               gap={4}
             >
-              <Image
+              <img
                 src="/treefrog.png"
                 alt="frog"
                 width={150}
                 height={150}
+                loading="lazy"
                 style={{ border: "1px", borderStyle: "solid", borderRadius: "100%", borderColor: "#15803d" }}
               />
               <HStack pt="2" spacing={1}>

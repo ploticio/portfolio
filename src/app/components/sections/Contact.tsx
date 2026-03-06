@@ -1,7 +1,4 @@
-"use client";
-
-import { Link } from "@chakra-ui/next-js";
-import { Button, Flex, Icon, Stack, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
+import { Button, Flex, Icon, Link, Stack, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
 import { EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 // import FormContact from "../FormContact";
 
